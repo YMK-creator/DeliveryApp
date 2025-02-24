@@ -17,7 +17,6 @@ public class InMemoryFoodServiceImpl implements FoodService {
     @Override
     public List<Food> getFoodByQueryParam(String name, String price) {
         List<Food> foodList = new ArrayList<>();
-
         // Создаём 10 разных объектов еды
         foodList.add(new Food("1", "Pizza", "500"));
         foodList.add(new Food("2", "Burger", "300"));
@@ -34,7 +33,7 @@ public class InMemoryFoodServiceImpl implements FoodService {
                 .filter(food -> (name == null || food.getName().equalsIgnoreCase(name)))
                 .filter(food -> (price == null
                         || Integer.parseInt(food.getPrice()) >= Integer.parseInt(price)))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
