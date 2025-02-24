@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/food/")
+@RequestMapping("/food")
 public class FoodController {
 
     private final InMemoryFoodServiceImpl foodService;
