@@ -28,10 +28,6 @@ public class InMemoryFoodServiceImpl implements FoodService {
         foodList.add(new Food("9", "Fish", "700"));
         foodList.add(new Food("10", "Fish", "700")); // Дублируем название и цену
 
-        if (name == null && price == null) {
-            throw new RuntimeException("Name and price are required");
-        }
-
         return foodList.stream()
                 .filter(food -> (name == null || food.getName().equalsIgnoreCase(name)))
                 .filter(food -> (price == null
