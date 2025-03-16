@@ -1,52 +1,41 @@
 package com.example.delivery.model;
 
-/**
- * Класс еды.
- */
+import jakarta.persistence.*;
+import jdk.jfr.DataAmount;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.util.List;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Food {
-    private String id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
-    private String price;
 
-    /**
-     * Конструктор с параметрами.
-     */
-    public Food(String id, String name, String price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
+    private BigDecimal price; // Лучше использовать BigDecimal для точности
 
-    /**
-     * Конструктор без параметров.
-     */
-    public Food() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false) // Внешний ключ
+    private Category category;
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    @ManyToMany
+    @JoinTable(
+            name = "food_ingredient",
+            joinColumns = @JoinColumn(name = "food_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id")
+    )
+    private List<Ingredient> ingredients;
 
 
 }

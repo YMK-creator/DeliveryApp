@@ -1,40 +1,54 @@
 package com.example.delivery.controller;
 
 import com.example.delivery.model.Food;
-import com.example.delivery.service.impl.InMemoryFoodServiceImpl;
+import com.example.delivery.service.FoodService;
+//import com.example.delivery.service.impl.InMemoryFoodServiceImpl;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("/food")
 public class FoodController {
+    private final FoodService foodService;
 
-    private final InMemoryFoodServiceImpl foodService;
-
-    public FoodController(InMemoryFoodServiceImpl foodService) {
+    @Autowired
+    public FoodController(FoodService foodService) {
         this.foodService = foodService;
     }
 
-    @GetMapping("{id}")
-    public ResponseEntity<Food> getFoodById(@PathVariable("id") String id) {
-        Optional<Food> food = foodService.getFood(id);
-        if (food.isPresent()) {
-            return ResponseEntity.ok(food.get());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @GetMapping
+    public List<Food> getAllFood() {
+        return foodService.getAllFood();
     }
 
-    @GetMapping
-    public List<Food> getAllFood(@RequestParam(name = "name", required = false) String name,
-                                 @RequestParam(name = "price", required = false) String price) {
-        return foodService.getFoodByQueryParam(name, price);
+    @GetMapping("/{id}")
+    public ResponseEntity<Food> getFoodById(@PathVariable Long id) {
+        Optional<Food> food = foodService.getFoodById(id);
+        return food.map(ResponseEntity::ok) // Если найдено -> вернуть 200 OK
+                .orElseGet(() -> ResponseEntity.notFound().build()); // Если нет -> вернуть 404
+    }
+
+    @PostMapping
+    public Food createFood(@RequestBody Food food) {
+        return foodService.saveFood(food);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Food> updateFood(@PathVariable Long id, @RequestBody Food updatedFood) {
+        Food food = foodService.updateFood(id, updatedFood);
+        return ResponseEntity.ok(food);
+    }
+
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteFood(@PathVariable Long id) {
+        foodService.deleteFood(id);
+        return ResponseEntity.noContent().build();
     }
 }
+
