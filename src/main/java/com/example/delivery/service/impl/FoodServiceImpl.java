@@ -3,11 +3,10 @@ package com.example.delivery.service.impl;
 import com.example.delivery.model.Food;
 import com.example.delivery.repository.FoodRepository;
 import com.example.delivery.service.FoodService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class FoodServiceImpl implements FoodService {
@@ -36,7 +35,7 @@ public class FoodServiceImpl implements FoodService {
     @Override
     public Food updateFood(Long id, Food updatedFood) {
         Food food = foodRepository.findById(id)
-                .orElseThrow(()->new RuntimeException("Food not found"));
+                .orElseThrow(() -> new RuntimeException("Food not found"));
         food.setName(updatedFood.getName());
         food.setPrice(updatedFood.getPrice());
         return foodRepository.save(food);

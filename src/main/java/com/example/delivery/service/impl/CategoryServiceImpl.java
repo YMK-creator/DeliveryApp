@@ -3,11 +3,10 @@ package com.example.delivery.service.impl;
 import com.example.delivery.model.Category;
 import com.example.delivery.repository.CategoryRepository;
 import com.example.delivery.service.CategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -41,7 +40,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category updateCategory(Long id, Category updatedcategory) {
         Category category = categoryRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("Category not found"));
+                .orElseThrow(() -> new RuntimeException("Category not found"));
         category.setName(updatedcategory.getName());
         return categoryRepository.save(category);
     }
