@@ -43,6 +43,13 @@ public class FoodController {
         return foodService.saveFood(food);
     }
 
+    @PostMapping("/{foodId}/ingredient/{ingredientId}")
+    public ResponseEntity<Food> addIngredientToFood(
+            @PathVariable Long foodId, @PathVariable Long ingredientId) {
+        Food updatedFood = foodService.addIngredientToFood(foodId, ingredientId);
+        return ResponseEntity.ok(updatedFood);
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Food> updateFood(@PathVariable Long id, @RequestBody Food updatedFood) {
         Food food = foodService.updateFood(id, updatedFood);

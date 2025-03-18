@@ -11,6 +11,8 @@ public interface FoodService {
 
     Food saveFood(Food food); // Добавить/обновить еду
 
+    Food addIngredientToFood(Long foodId, Long ingredientId);
+
     Food updateFood(Long id, Food updatedFood);
 
     void deleteFood(Long id); // Удалить еду по ID

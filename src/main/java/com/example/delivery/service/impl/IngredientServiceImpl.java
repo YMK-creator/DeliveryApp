@@ -1,14 +1,20 @@
 package com.example.delivery.service.impl;
 
+import com.example.delivery.model.Food;
 import com.example.delivery.model.Ingredient;
+import com.example.delivery.repository.FoodRepository;
 import com.example.delivery.repository.IngredientRepository;
 import com.example.delivery.service.IngredientService;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+@Transactional
+@Slf4j
 @Service
 public class IngredientServiceImpl implements IngredientService {
     private final IngredientRepository ingredientRepository;
@@ -17,6 +23,9 @@ public class IngredientServiceImpl implements IngredientService {
     public IngredientServiceImpl(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
+
+    @Autowired
+    private FoodRepository foodRepository;
 
     @Override
     public List<Ingredient> getAllIngredients() {
@@ -43,6 +52,19 @@ public class IngredientServiceImpl implements IngredientService {
 
     @Override
     public void deleteIngredient(Long id) {
-        ingredientRepository.deleteById(id);
+        Ingredient ingredient = ingredientRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Ингредиент не найден"));
+
+        // Убираем связи ингредиента с блюдами
+        for (Food food : ingredient.getFoods()) {
+            food.getIngredients().remove(ingredient);
+        }
+
+        // Сохраняем изменения перед удалением ингредиента
+        foodRepository.saveAll(ingredient.getFoods());
+
+        // Теперь можно удалить сам ингредиент
+        ingredientRepository.delete(ingredient);
     }
+
 }

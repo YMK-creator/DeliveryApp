@@ -28,7 +28,7 @@ public class Food {
 
     private String name;
 
-    private BigDecimal price; // Лучше использовать BigDecimal для точности
+    private BigDecimal price;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false) // Внешний ключ
@@ -41,6 +41,5 @@ public class Food {
             inverseJoinColumns = @JoinColumn(name = "ingredient_id")
     )
     private List<Ingredient> ingredients;
-
 
 }
