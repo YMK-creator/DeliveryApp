@@ -34,22 +34,14 @@ public class FoodServiceImpl implements FoodService {
 
     @Override
     public Food saveFood(Food food) {
-        System.out.println("Received food: " + food);
+        List<Long> ingredientIds = food
+                .getIngredients().stream().map(Ingredient::getId).toList();
 
-        if (food.getIngredients() != null && !food.getIngredients().isEmpty()) {
-            List<Long> ingredientIds = food
-                    .getIngredients().stream().map(Ingredient::getId).toList();
-            System.out.println("Ingredient IDs received: " + ingredientIds);
+        // Загружаем ингредиенты из БД, чтобы избежать проблем с detach-объектами
+        List<Ingredient> existingIngredients = ingredientRepository.findAllById(ingredientIds);
 
-            // Загружаем ингредиенты из БД, чтобы избежать проблем с detach-объектами
-            List<Ingredient> existingIngredients = ingredientRepository.findAllById(ingredientIds);
-            System.out.println("Loaded ingredients from DB: " + existingIngredients);
-
-            // Явно устанавливаем ингредиенты
-            food.setIngredients(existingIngredients);
-        } else {
-            System.out.println("No ingredients found in request.");
-        }
+        // Явно устанавливаем ингредиенты
+        food.setIngredients(existingIngredients);
 
         // Сохраняем еду в БД
         Food savedFood = foodRepository.save(food);

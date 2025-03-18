@@ -18,14 +18,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class IngredientServiceImpl implements IngredientService {
     private final IngredientRepository ingredientRepository;
+    private final FoodRepository foodRepository;
 
     @Autowired
-    public IngredientServiceImpl(IngredientRepository ingredientRepository) {
+    public IngredientServiceImpl(
+            IngredientRepository ingredientRepository, FoodRepository foodRepository) {
         this.ingredientRepository = ingredientRepository;
+        this.foodRepository = foodRepository;
     }
 
-    @Autowired
-    private FoodRepository foodRepository;
 
     @Override
     public List<Ingredient> getAllIngredients() {
