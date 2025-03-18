@@ -34,6 +34,5 @@ DeliveryApp — это **REST API** для управления сервисом
 - **База данных:** PostgreSQL  
 - **ORM:** Hibernate  
 - **Сборка:** Maven  
-- **API-документация:** Postman  
 
 ---
