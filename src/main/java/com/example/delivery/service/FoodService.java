@@ -16,4 +16,6 @@ public interface FoodService {
     Food updateFood(Long id, Food updatedFood);
 
     void deleteFood(Long id); // Удалить еду по ID
+
+    List<Food> searchFoodByName(String name);
 }

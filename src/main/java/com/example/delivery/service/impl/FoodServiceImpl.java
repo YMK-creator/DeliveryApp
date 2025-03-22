@@ -7,6 +7,8 @@ import com.example.delivery.repository.IngredientRepository;
 import com.example.delivery.service.FoodService;
 import java.util.List;
 import java.util.Optional;
+
+import com.example.delivery.utils.InMemoryCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +16,14 @@ import org.springframework.stereotype.Service;
 public class FoodServiceImpl implements FoodService {
     private final FoodRepository foodRepository;
     private final IngredientRepository ingredientRepository;
+    private final InMemoryCache<Long, Food> foodCache;
 
     @Autowired
     public FoodServiceImpl(
-            FoodRepository foodRepository, IngredientRepository ingredientRepository) {
+            FoodRepository foodRepository, IngredientRepository ingredientRepository, InMemoryCache<Long, Food> foodCache) {
         this.foodRepository = foodRepository;
         this.ingredientRepository = ingredientRepository;
+        this.foodCache = foodCache;
     }
 
     @Override
@@ -29,7 +33,15 @@ public class FoodServiceImpl implements FoodService {
 
     @Override
     public Optional<Food> getFoodById(Long id) {
-        return foodRepository.findById(id);
+        Food cachedAccount = foodCache.get(id);
+        if (cachedAccount != null) {
+            return Optional.of(cachedAccount);
+        }
+
+        // Если в кэше нет, запрашиваем из БД
+        Optional<Food> account = foodRepository.findById(id);
+        account.ifPresent(acc -> foodCache.put(id, acc)); // Сохраняем в кэш
+        return account;
     }
 
     @Override
@@ -57,9 +69,11 @@ public class FoodServiceImpl implements FoodService {
             ingredientRepository.saveAll(savedFood.getIngredients()); // Явно обновляем ингредиенты
         }
 
+        // Кэшируем
+        foodCache.put(savedFood.getId(), savedFood);
+
         return savedFood;
     }
-
 
     @Override
     public Food updateFood(Long id, Food updatedFood) {
@@ -82,7 +96,13 @@ public class FoodServiceImpl implements FoodService {
             food.setIngredients(existingIngredients);
         }
 
-        return foodRepository.save(food);
+        // Сохраняем обновленное блюдо
+        Food updated = foodRepository.save(food);
+
+        // Обновляем кэш
+        foodCache.put(id, updated);
+
+        return updated;
     }
 
     @Override
@@ -93,12 +113,23 @@ public class FoodServiceImpl implements FoodService {
                 .orElseThrow(() -> new RuntimeException("Ingredient not found"));
 
         food.getIngredients().add(ingredient);
-        return foodRepository.save(food);
+        Food updatedFood = foodRepository.save(food);
+
+        // Обновляем кэш
+        foodCache.put(foodId, updatedFood);
+
+        return updatedFood;
     }
 
     @Override
     public void deleteFood(Long id) {
         foodRepository.deleteById(id);
+        foodCache.evict(id); // Удаляем еду из кэша
     }
 
+    @Override
+    public List<Food> searchFoodByName(String name) {
+        return foodRepository.findByNameContainingIgnoreCase(name);
+    }
+    
 }
