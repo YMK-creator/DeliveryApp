@@ -3,7 +3,6 @@ package com.example.delivery.controller;
 import com.example.delivery.model.Ingredient;
 import com.example.delivery.service.IngredientService;
 import java.util.List;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,9 +27,8 @@ public class IngredientController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Ingredient> getIngredientById(@PathVariable Long id) {
-        Optional<Ingredient> ingredient = ingredientService.getIngredientById(id);
-        return ingredient.map(ResponseEntity::ok) // Если найдено -> вернуть 200 OK
-                .orElseGet(() -> ResponseEntity.notFound().build()); // Если нет -> вернуть 404
+        Ingredient ingredient = ingredientService.getIngredientById(id);
+        return ResponseEntity.ok(ingredient);
     }
 
     @PostMapping

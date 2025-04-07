@@ -1,26 +1,30 @@
 package com.example.delivery.service.impl;
 
+import com.example.delivery.exception.DuplicateEntityException;
+import com.example.delivery.exception.EntityNotFoundException;
+import com.example.delivery.exception.InvalidEntityException;
 import com.example.delivery.model.Food;
 import com.example.delivery.model.Ingredient;
 import com.example.delivery.repository.FoodRepository;
 import com.example.delivery.repository.IngredientRepository;
 import com.example.delivery.service.FoodService;
+import com.example.delivery.utils.CustomCache;
 import java.util.List;
-import java.util.Optional;
-
-import com.example.delivery.utils.InMemoryCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class FoodServiceImpl implements FoodService {
     private final FoodRepository foodRepository;
     private final IngredientRepository ingredientRepository;
-    private final InMemoryCache<Long, Food> foodCache;
+    private final CustomCache<Long, Food> foodCache;
 
     @Autowired
     public FoodServiceImpl(
-            FoodRepository foodRepository, IngredientRepository ingredientRepository, InMemoryCache<Long, Food> foodCache) {
+            FoodRepository foodRepository,
+            IngredientRepository ingredientRepository,
+            CustomCache<Long, Food> foodCache) {
         this.foodRepository = foodRepository;
         this.ingredientRepository = ingredientRepository;
         this.foodCache = foodCache;
@@ -32,53 +36,58 @@ public class FoodServiceImpl implements FoodService {
     }
 
     @Override
-    public Optional<Food> getFoodById(Long id) {
-        Food cachedAccount = foodCache.get(id);
-        if (cachedAccount != null) {
-            return Optional.of(cachedAccount);
+    public Food getFoodById(Long id) {
+        Food cached = foodCache.get(id);
+        if (cached != null) {
+            return cached;
         }
 
-        // Если в кэше нет, запрашиваем из БД
-        Optional<Food> account = foodRepository.findById(id);
-        account.ifPresent(acc -> foodCache.put(id, acc)); // Сохраняем в кэш
-        return account;
+        // Если не найдено — выбрасываем исключение
+        return foodRepository.findById(id)
+                .map(food -> {
+                    foodCache.put(id, food);
+                    return food;
+                })
+                .orElseThrow(() -> new EntityNotFoundException("Food", id));
     }
 
     @Override
     public Food saveFood(Food food) {
-        List<Long> ingredientIds = food
-                .getIngredients().stream().map(Ingredient::getId).toList();
+        if (food.getName() == null || food.getName().trim().isEmpty()) {
+            throw new InvalidEntityException("Food name must not be empty");
+        }
 
-        // Загружаем ингредиенты из БД, чтобы избежать проблем с detach-объектами
+        // Проверка на дубликат по имени
+        boolean exists = foodRepository.findByNameIgnoreCase(food.getName()).isPresent();
+        if (exists) {
+            throw new DuplicateEntityException("Food", "name", food.getName());
+        }
+
+        List<Long> ingredientIds = food.getIngredients()
+                .stream()
+                .map(Ingredient::getId)
+                .toList();
         List<Ingredient> existingIngredients = ingredientRepository.findAllById(ingredientIds);
-
-        // Явно устанавливаем ингредиенты
         food.setIngredients(existingIngredients);
-
-        // Сохраняем еду в БД
         Food savedFood = foodRepository.save(food);
 
-        // Явно сохраняем связь с ингредиентами, если они есть
         if (savedFood.getIngredients() != null && !savedFood.getIngredients().isEmpty()) {
             savedFood.getIngredients().forEach(ingredient -> {
                 if (!ingredient.getFoods().contains(savedFood)) {
                     ingredient.getFoods().add(savedFood);
                 }
             });
-
-            ingredientRepository.saveAll(savedFood.getIngredients()); // Явно обновляем ингредиенты
+            ingredientRepository.saveAll(savedFood.getIngredients());
         }
 
-        // Кэшируем
         foodCache.put(savedFood.getId(), savedFood);
-
         return savedFood;
     }
 
     @Override
     public Food updateFood(Long id, Food updatedFood) {
         Food food = foodRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Food not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Food", id));
 
         if (updatedFood.getName() != null) {
             food.setName(updatedFood.getName());
@@ -96,40 +105,35 @@ public class FoodServiceImpl implements FoodService {
             food.setIngredients(existingIngredients);
         }
 
-        // Сохраняем обновленное блюдо
         Food updated = foodRepository.save(food);
-
-        // Обновляем кэш
         foodCache.put(id, updated);
-
         return updated;
     }
 
     @Override
     public Food addIngredientToFood(Long foodId, Long ingredientId) {
         Food food = foodRepository.findById(foodId)
-                .orElseThrow(() -> new RuntimeException("Food not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Food", foodId));
         Ingredient ingredient = ingredientRepository.findById(ingredientId)
-                .orElseThrow(() -> new RuntimeException("Ingredient not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient", ingredientId));
 
         food.getIngredients().add(ingredient);
         Food updatedFood = foodRepository.save(food);
-
-        // Обновляем кэш
         foodCache.put(foodId, updatedFood);
-
         return updatedFood;
     }
 
     @Override
     public void deleteFood(Long id) {
+        if (!foodRepository.existsById(id)) {
+            throw new EntityNotFoundException("Food", id);
+        }
         foodRepository.deleteById(id);
-        foodCache.evict(id); // Удаляем еду из кэша
+        foodCache.remove(id);
     }
 
     @Override
     public List<Food> searchFoodByName(String name) {
         return foodRepository.findByNameContainingIgnoreCase(name);
     }
-    
 }

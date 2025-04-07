@@ -1,0 +1,287 @@
+2025-04-06 22:25:48 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 4300 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-06 22:25:48 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 22:25:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 22:25:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2025-04-06 22:25:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 22:25:50 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 22:25:50 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 22:25:50 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 22:25:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 22:25:50 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1869 ms
+2025-04-06 22:25:50 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 22:25:50 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-06 22:25:50 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-06 22:25:51 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 22:25:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 22:25:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30228de7
+2025-04-06 22:25:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-06 22:25:51 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 22:25:53 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 22:25:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 22:25:53 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-06 22:25:54 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 22:25:55 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-06 22:25:55 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-06 22:25:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-06 22:25:55 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 7.706 seconds (process running for 8.908)
+2025-04-06 22:28:35 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 22:28:35 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-06 22:28:35 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-06 22:29:33 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'date': Failed to convert value of type 'java.lang.String' to required type 'java.time.LocalDate'; Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable @org.springframework.format.annotation.DateTimeFormat java.time.LocalDate] for value [aa124621-8eff-4a16-bbb1-6fb7f7ec9074]]
+2025-04-06 22:31:38 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 553 ms
+2025-04-06 22:35:24 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 22:35:24 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-06 22:35:24 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-06 22:35:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 22:35:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-06 22:35:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-06 22:35:29 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 9784 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-06 22:35:29 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-06 22:35:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 22:35:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2025-04-06 22:35:31 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-06 22:35:31 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-06 22:35:31 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-06 22:35:31 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-06 22:35:31 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-06 22:35:31 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1870 ms
+2025-04-06 22:35:32 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 22:35:32 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-06 22:35:32 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-06 22:35:32 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 22:35:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-06 22:35:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7db162f2
+2025-04-06 22:35:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-06 22:35:32 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 22:35:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 22:35:34 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 22:35:34 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-06 22:35:35 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 22:35:35 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-06 22:35:35 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-06 22:35:35 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-06 22:35:35 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 6.051 seconds (process running for 6.865)
+2025-04-06 22:35:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 22:35:54 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-06 22:35:54 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-06 22:35:55 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 643 ms
+2025-04-06 22:36:22 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 22:36:22 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-06 22:36:22 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-06 22:36:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 22:36:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-06 22:36:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 00:08:52 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 2780 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 00:08:52 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 00:08:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 00:08:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2025-04-07 00:08:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 00:08:54 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 00:08:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 00:08:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 00:08:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 00:08:54 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2041 ms
+2025-04-07 00:08:54 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 00:08:54 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 00:08:54 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 00:08:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 00:08:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 00:08:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21a5b599
+2025-04-07 00:08:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 00:08:55 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 00:08:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 00:08:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 00:08:57 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 00:08:58 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 00:08:58 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 00:08:59 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 00:08:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 00:08:59 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 8.095 seconds (process running for 9.316)
+2025-04-07 00:09:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 00:09:34 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 00:09:34 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-07 00:09:41 INFO  c.example.delivery.utils.CustomCache - Added entry: 17=Food(id=17, name=Cheese burger, price=2.99) (Cache size: 1)
+2025-04-07 00:10:07 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 00:10:07 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 00:10:07 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 00:10:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 00:10:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 00:10:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 00:44:35 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 5460 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 00:44:35 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 00:44:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 00:44:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2025-04-07 00:44:38 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 00:44:38 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 00:44:38 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 00:44:38 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 00:44:38 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 00:44:38 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3186 ms
+2025-04-07 00:44:39 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 00:44:39 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 00:44:39 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 00:44:40 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 00:44:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 00:44:40 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42401b81
+2025-04-07 00:44:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 00:44:40 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 00:44:42 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 00:44:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 00:44:43 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 00:44:44 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 00:44:44 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 00:44:45 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 00:44:45 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 00:44:45 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 10.86 seconds (process running for 12.103)
+2025-04-07 00:45:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 00:45:03 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 00:45:03 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-07 00:45:03 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 00:45:38 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByName() - result: []
+2025-04-07 00:45:50 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByName() - result: [Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 00:46:52 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 17=null (Cache size: 0)
+2025-04-07 00:46:52 INFO  c.example.delivery.utils.CustomCache - Added entry: 17=Food(id=17, name=Cheese burger, price=2.99) (Cache size: 1)
+2025-04-07 00:46:52 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=17, name=Cheese burger, price=2.99)
+2025-04-07 00:46:54 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 17=Food(id=17, name=Cheese burger, price=2.99) (Cache size: 1)
+2025-04-07 00:46:54 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=17, name=Cheese burger, price=2.99)
+2025-04-07 00:47:52 INFO  c.example.delivery.utils.CustomCache - Removed entry: 17=Food(id=17, name=Cheese burger, price=2.99) (Cache size: 0)
+2025-04-07 00:47:52 INFO  c.example.delivery.utils.CustomCache - Automatically removed entry: 17 (Cache size: 0)
+2025-04-07 00:50:46 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 00:50:46 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 00:50:46 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 00:50:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 00:50:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 00:50:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 01:17:56 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 3112 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 01:17:56 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 01:17:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 01:17:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2025-04-07 01:17:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 01:17:58 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 01:17:58 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 01:17:58 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 01:17:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 01:17:59 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2888 ms
+2025-04-07 01:17:59 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 01:17:59 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 01:17:59 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 01:18:00 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 01:18:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 01:18:00 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6654ca0d
+2025-04-07 01:18:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 01:18:00 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 01:18:03 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 01:18:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 01:18:04 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 01:18:06 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 01:18:06 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 01:18:07 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 01:18:07 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 01:18:07 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 12.023 seconds (process running for 13.208)
+2025-04-07 01:18:43 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 01:18:43 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 01:18:43 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-07 01:18:43 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 10000=null (Cache size: 0)
+2025-04-07 01:18:44 ERROR c.e.delivery.aspects.LoggingAspect - !! getFoodById() - exception: Food with id 10000 not found
+2025-04-07 01:20:28 INFO  c.e.delivery.aspects.LoggingAspect - >> saveFood() - args: [Food(id=null, name=, price=4.99)]
+2025-04-07 01:20:28 ERROR c.e.delivery.aspects.LoggingAspect - !! saveFood() - exception: Food name must not be empty
+2025-04-07 01:21:29 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 01:21:45 INFO  c.e.delivery.aspects.LoggingAspect - >> saveFood() - args: [Food(id=null, name=Fish and Chips, price=4.99)]
+2025-04-07 01:21:45 ERROR c.e.delivery.aspects.LoggingAspect - !! saveFood() - exception: Food with name 'Fish and Chips' already exists
+2025-04-07 01:24:52 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@2781a1bc[Not completed]
+2025-04-07 01:24:58 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@57339e6d[Not completed]
+2025-04-07 01:25:20 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-04-07 01:25:43 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@428debf9[Not completed]
+2025-04-07 01:25:59 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@506fd037[Not completed]
+2025-04-07 01:26:18 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-04-07 01:27:27 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 01:27:27 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 01:27:27 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 01:27:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 01:27:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 01:27:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 09:19:14 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 8308 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 09:19:14 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 09:19:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 09:19:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 3 JPA repository interfaces.
+2025-04-07 09:19:18 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 09:19:18 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 09:19:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 09:19:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 09:19:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 09:19:19 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4357 ms
+2025-04-07 09:19:19 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 09:19:19 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 09:19:19 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 09:19:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 09:19:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 09:19:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@47ef5a33
+2025-04-07 09:19:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 09:19:21 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 09:19:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 09:19:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 09:19:26 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 09:19:28 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 09:19:28 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 09:19:30 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 09:19:30 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 09:19:30 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 16.276 seconds (process running for 17.958)
+2025-04-07 09:19:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 09:19:52 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 09:19:52 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-07 09:19:53 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@77875e4a[Not completed]
+2025-04-07 09:20:10 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@4c8117a7[Not completed]
+2025-04-07 09:20:44 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: COMPLETED
+2025-04-07 09:20:44 INFO  c.e.delivery.aspects.LoggingAspect - << getLogFilePath() - result: logs\log-3c8b5300-d2b8-4996-8457-e14f63da67e9.log
+2025-04-07 09:24:42 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-07 09:25:03 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-07 09:25:06 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-07 09:25:13 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@7e4f454b[Not completed]
+2025-04-07 09:25:23 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 09:25:23 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 09:25:23 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 09:25:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 09:25:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 09:25:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

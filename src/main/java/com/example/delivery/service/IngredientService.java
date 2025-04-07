@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface IngredientService {
     List<Ingredient> getAllIngredients();
 
-    Optional<Ingredient> getIngredientById(Long id);
+    Ingredient getIngredientById(Long id);
 
     Ingredient saveIngredient(Ingredient ingredient);
 

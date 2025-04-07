@@ -1,10 +1,10 @@
 package com.example.delivery.service.impl;
 
+import com.example.delivery.exception.EntityNotFoundException;
 import com.example.delivery.model.Category;
 import com.example.delivery.repository.CategoryRepository;
 import com.example.delivery.service.CategoryService;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +23,9 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Optional<Category> getCategoryById(Long id) {
-        return categoryRepository.findById(id);
+    public Category getCategoryById(Long id) {
+        return categoryRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Category", id));
     }
 
     @Override
@@ -34,14 +35,18 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void deleteCategory(Long id) {
+        if (!categoryRepository.existsById(id)) {
+            throw new EntityNotFoundException("Category", id);
+        }
         categoryRepository.deleteById(id);
     }
 
     @Override
-    public Category updateCategory(Long id, Category updatedcategory) {
+    public Category updateCategory(Long id, Category updatedCategory) {
         Category category = categoryRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Category not found"));
-        category.setName(updatedcategory.getName());
+                .orElseThrow(() -> new EntityNotFoundException("Category", id));
+
+        category.setName(updatedCategory.getName());
         return categoryRepository.save(category);
     }
 }

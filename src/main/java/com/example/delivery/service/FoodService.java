@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface FoodService {
     List<Food> getAllFood(); // Получить весь список еды
 
-    Optional<Food> getFoodById(Long id); // Получить еду по ID
+    Food getFoodById(Long id); // Получить еду по ID
 
     Food saveFood(Food food); // Добавить/обновить еду
 
