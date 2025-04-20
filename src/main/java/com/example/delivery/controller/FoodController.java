@@ -32,6 +32,14 @@ public class FoodController {
         this.foodService = foodService;
     }
 
+    @PostMapping("/bulk")
+    @Operation(summary = "Bulk-создание блюд", description = "Создает список блюд")
+    @ApiResponse(responseCode = "200", description = "Блюда успешно созданы")
+    public ResponseEntity<List<Food>> saveFoodsBulk(@RequestBody List<Food> foods) {
+        List<Food> savedFoods = foodService.saveFoodsBulk(foods);
+        return ResponseEntity.ok(savedFoods);
+    }
+
     @Operation(summary = "Получить все блюда",
             description = "Возвращает список всех доступных блюд.")
     @ApiResponses(value = {
@@ -97,7 +105,7 @@ public class FoodController {
 
     @Operation(summary = "Удалить блюдо", description = "Удаляет блюдо по заданному ID.")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "204", description = "Блюдо успешно удалено"),
+        @ApiResponse(responseCode = "200", description = "Блюдо успешно удалено"),
         @ApiResponse(responseCode = "404", description = "Блюдо не найдено")
     })
     @DeleteMapping("/{id}")
@@ -118,4 +126,18 @@ public class FoodController {
             description = "Поисковый запрос для поиска блюд") @RequestParam String query) {
         return foodService.searchFoodByName(query);
     }
+
+    @Operation(summary = "Поиск блюда по категории",
+            description = "Ищет блюда по названию категории.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Результаты поиска найдены"),
+            @ApiResponse(responseCode = "400", description = "Неверный запрос")
+    })
+
+    @GetMapping("/search-by-category")
+    public List<Food> searchFoodByCategoryName(
+            @Parameter(description = "Название категории") @RequestParam String category) {
+        return foodService.searchFoodByCategoryName(category);
+    }
+
 }

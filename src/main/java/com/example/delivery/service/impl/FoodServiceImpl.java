@@ -10,6 +10,7 @@ import com.example.delivery.repository.IngredientRepository;
 import com.example.delivery.service.FoodService;
 import com.example.delivery.utils.CustomCache;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,6 +50,53 @@ public class FoodServiceImpl implements FoodService {
                     return food;
                 })
                 .orElseThrow(() -> new EntityNotFoundException("Food", id));
+    }
+
+    @Override
+    public List<Food> saveFoodsBulk(List<Food> foods) {
+        return foods.stream()
+                .peek(food -> {
+                    if (food.getName() == null || food.getName().trim().isEmpty()) {
+                        throw new InvalidEntityException("Food name must not be empty");
+                    }
+
+                    boolean exists = foodRepository.findByNameIgnoreCase(food.getName()).isPresent();
+                    if (exists) {
+                        throw new DuplicateEntityException("Food", "name", food.getName());
+                    }
+
+                    if (food.getIngredients() == null || food.getIngredients().isEmpty()) {
+                        throw new InvalidEntityException("Food must have at least one ingredient");
+                    }
+
+                    boolean hasNullIds = food.getIngredients().stream().anyMatch(i -> i.getId() == null);
+                    if (hasNullIds) {
+                        throw new InvalidEntityException("Each ingredient must have an ID");
+                    }
+                })
+                .map(food -> {
+                    List<Long> ingredientIds = food.getIngredients().stream()
+                            .map(Ingredient::getId)
+                            .toList();
+
+                    List<Ingredient> existingIngredients = ingredientRepository.findAllById(ingredientIds);
+                    food.setIngredients(existingIngredients);
+
+                    Food savedFood = foodRepository.save(food);
+
+                    if (savedFood.getIngredients() != null && !savedFood.getIngredients().isEmpty()) {
+                        savedFood.getIngredients().forEach(ingredient -> {
+                            if (!ingredient.getFoods().contains(savedFood)) {
+                                ingredient.getFoods().add(savedFood);
+                            }
+                        });
+                        ingredientRepository.saveAll(savedFood.getIngredients());
+                    }
+
+                    foodCache.put(savedFood.getId(), savedFood);
+                    return savedFood;
+                })
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -135,5 +183,10 @@ public class FoodServiceImpl implements FoodService {
     @Override
     public List<Food> searchFoodByName(String name) {
         return foodRepository.findByNameContainingIgnoreCase(name);
+    }
+
+    @Override
+    public List<Food> searchFoodByCategoryName(String categoryName) {
+        return foodRepository.findByCategoryNameContainingIgnoreCase(categoryName);
     }
 }

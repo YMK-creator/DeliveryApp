@@ -285,3 +285,885 @@
 2025-04-07 09:25:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-04-07 09:25:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-04-07 09:25:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 12:32:56 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 12336 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 12:32:56 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 12:32:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 12:32:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2025-04-07 12:32:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 12:32:58 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 12:32:58 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 12:32:58 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 12:32:58 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 12:32:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1743 ms
+2025-04-07 12:32:58 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 12:32:58 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 12:32:58 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 12:32:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 12:32:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 12:32:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51e94b7d
+2025-04-07 12:32:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 12:32:59 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 12:33:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 12:33:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 12:33:01 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 12:33:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 12:33:02 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 12:33:03 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 12:33:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 12:33:03 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 7.512 seconds (process running for 12.932)
+2025-04-07 12:33:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 12:33:03 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 12:33:03 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-07 12:33:05 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1035 ms
+2025-04-07 13:11:35 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 13:11:35 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 13:11:35 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 13:11:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 13:11:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 13:11:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 13:11:41 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 1768 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 13:11:41 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 13:11:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 13:11:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2025-04-07 13:11:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 13:11:43 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 13:11:43 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 13:11:43 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 13:11:43 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 13:11:43 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1491 ms
+2025-04-07 13:11:43 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 13:11:43 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 13:11:43 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 13:11:43 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 13:11:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 13:11:43 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49e0b123
+2025-04-07 13:11:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 13:11:43 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 13:11:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 13:11:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 13:11:45 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 13:11:46 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 13:11:46 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 13:11:46 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 13:11:46 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 13:11:46 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 5.633 seconds (process running for 6.428)
+2025-04-07 13:13:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 13:13:16 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 13:13:16 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-07 13:13:16 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByCategoryName() - result: []
+2025-04-07 13:13:23 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 13:13:37 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByCategoryName() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 13:21:57 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByCategoryName() - result: [Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99)]
+2025-04-07 13:33:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 13:33:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 13:33:47 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 13:33:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 13:33:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 13:33:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 13:34:03 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 10408 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 13:34:03 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 13:34:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 13:34:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2025-04-07 13:34:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 13:34:05 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 13:34:05 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 13:34:05 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 13:34:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 13:34:05 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2357 ms
+2025-04-07 13:34:05 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 13:34:05 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 13:34:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 13:34:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 13:34:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 13:34:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e6cb932
+2025-04-07 13:34:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 13:34:07 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 13:34:09 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 13:34:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 13:34:10 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 13:34:11 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 13:34:11 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 13:34:12 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 13:34:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 13:34:12 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 10.093 seconds (process running for 13.097)
+2025-04-07 13:34:33 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 13:34:33 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 13:34:33 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-07 13:34:34 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 13:34:40 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByName() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-07 13:37:16 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07 13:37:16 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-07 13:37:16 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-07 13:37:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 13:37:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-07 13:37:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-07 13:37:21 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 10192 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-07 13:37:21 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-07 13:37:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07 13:37:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2025-04-07 13:37:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-07 13:37:22 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-07 13:37:22 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-07 13:37:22 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07 13:37:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-07 13:37:22 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1496 ms
+2025-04-07 13:37:22 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07 13:37:22 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07 13:37:22 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-07 13:37:23 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07 13:37:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-07 13:37:23 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35536760
+2025-04-07 13:37:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-07 13:37:23 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07 13:37:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07 13:37:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07 13:37:24 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-07 13:37:25 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07 13:37:25 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-07 13:37:26 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-07 13:37:26 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-07 13:37:26 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 5.526 seconds (process running for 6.372)
+2025-04-07 13:37:42 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-07 13:37:42 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-07 13:37:42 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-07 13:37:42 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByName() - result: [Food(id=12, name=Big Tasty, price=4.99)]
+2025-04-07 13:58:49 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m55s721ms767µs700ns).
+2025-04-11 10:26:45 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 13896 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-11 10:26:45 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 10:26:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-11 10:26:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2025-04-11 10:26:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-11 10:26:48 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 10:26:48 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 10:26:48 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 10:26:48 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 10:26:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2881 ms
+2025-04-11 10:26:49 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-11 10:26:49 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-11 10:26:49 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-11 10:26:50 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-11 10:26:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-11 10:26:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72a34537
+2025-04-11 10:26:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-11 10:26:51 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-11 10:26:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-11 10:26:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 10:26:56 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-11 10:26:59 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-11 10:26:59 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-11 10:27:01 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 10:27:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-11 10:27:01 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 16.047 seconds (process running for 18.101)
+2025-04-11 10:29:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 10:29:29 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-11 10:29:29 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-11 10:29:29 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByName() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=15, name=Fried Fish, price=2.99)]
+2025-04-11 10:30:43 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "category"]
+2025-04-11 10:32:13 ERROR c.e.delivery.aspects.LoggingAspect - !! searchFoodByCategoryName() - exception: Encountered a duplicated sql alias [id] during auto-discovery of a native-sql query
+2025-04-11 10:32:13 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: Encountered a duplicated sql alias [id] during auto-discovery of a native-sql query] with root cause
+org.hibernate.loader.NonUniqueDiscoveredSqlAliasException: Encountered a duplicated sql alias [id] during auto-discovery of a native-sql query
+	at org.hibernate.query.results.ResultSetMappingImpl.resolve(ResultSetMappingImpl.java:289)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:340)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:142)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:132)
+	at org.hibernate.query.sql.internal.NativeSelectQueryPlanImpl.performList(NativeSelectQueryPlanImpl.java:135)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doList(NativeQueryImpl.java:693)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143)
+	at org.hibernate.query.Query.getResultList(Query.java:120)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:130)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:170)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy151.findByCategoryNameContainingIgnoreCase(Unknown Source)
+	at com.example.delivery.service.impl.FoodServiceImpl.searchFoodByCategoryName(FoodServiceImpl.java:142)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.example.delivery.service.impl.FoodServiceImpl$$SpringCGLIB$$0.searchFoodByCategoryName(<generated>)
+	at com.example.delivery.controller.FoodController.searchFoodByCategoryName(FoodController.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2025-04-11 10:33:04 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'category' for method parameter type String is not present]
+2025-04-11 10:34:14 ERROR c.e.delivery.aspects.LoggingAspect - !! searchFoodByCategoryName() - exception: Encountered a duplicated sql alias [id] during auto-discovery of a native-sql query
+2025-04-11 10:34:14 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.jpa.JpaSystemException: Encountered a duplicated sql alias [id] during auto-discovery of a native-sql query] with root cause
+org.hibernate.loader.NonUniqueDiscoveredSqlAliasException: Encountered a duplicated sql alias [id] during auto-discovery of a native-sql query
+	at org.hibernate.query.results.ResultSetMappingImpl.resolve(ResultSetMappingImpl.java:289)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:340)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:142)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:132)
+	at org.hibernate.query.sql.internal.NativeSelectQueryPlanImpl.performList(NativeSelectQueryPlanImpl.java:135)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doList(NativeQueryImpl.java:693)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143)
+	at org.hibernate.query.Query.getResultList(Query.java:120)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:130)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:170)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy151.findByCategoryNameContainingIgnoreCase(Unknown Source)
+	at com.example.delivery.service.impl.FoodServiceImpl.searchFoodByCategoryName(FoodServiceImpl.java:142)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at com.example.delivery.service.impl.FoodServiceImpl$$SpringCGLIB$$0.searchFoodByCategoryName(<generated>)
+	at com.example.delivery.controller.FoodController.searchFoodByCategoryName(FoodController.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2025-04-11 10:49:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-11 10:49:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-11 10:49:47 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-11 10:49:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 10:49:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-11 10:49:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-11 10:50:03 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 12536 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-11 10:50:03 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 10:50:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-11 10:50:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+2025-04-11 10:50:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-11 10:50:06 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 10:50:06 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 10:50:06 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 10:50:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 10:50:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2674 ms
+2025-04-11 10:50:06 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-11 10:50:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-11 10:50:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-11 10:50:07 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-11 10:50:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-11 10:50:07 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e85e3f1
+2025-04-11 10:50:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-11 10:50:07 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-11 10:50:08 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-11 10:50:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 10:50:09 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-11 10:50:10 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-11 10:50:10 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-11 10:50:11 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 10:50:11 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-11 10:50:11 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 8.149 seconds (process running for 11.239)
+2025-04-11 10:50:26 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 10:50:26 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-11 10:50:26 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-11 10:50:26 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByCategoryName() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-11 10:50:37 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByCategoryName() - result: [Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99)]
+2025-04-11 10:50:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-11 10:50:47 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-11 10:50:47 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-11 10:50:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 10:50:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-11 10:50:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-11 14:39:22 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 16392 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-11 14:39:22 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 14:39:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-11 14:39:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2025-04-11 14:39:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-11 14:39:24 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 14:39:24 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 14:39:24 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 14:39:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 14:39:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2130 ms
+2025-04-11 14:39:24 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-11 14:39:24 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-11 14:39:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-11 14:39:25 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-11 14:39:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-11 14:39:26 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6921cfa
+2025-04-11 14:39:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-11 14:39:26 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-11 14:39:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-11 14:39:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 14:39:30 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-11 14:39:32 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-11 14:39:32 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-11 14:39:33 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 14:39:33 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-11 14:39:33 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 12.368 seconds (process running for 15.35)
+2025-04-11 14:39:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 14:39:34 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-11 14:39:34 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-11 14:40:02 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 609 ms
+2025-04-11 14:42:11 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-11 14:42:11 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-11 14:42:11 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-11 14:42:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 14:42:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-11 14:42:11 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-11 14:54:50 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 11992 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-11 14:54:50 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 14:54:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-11 14:54:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
+2025-04-11 14:54:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-11 14:54:52 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 14:54:52 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 14:54:52 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 14:54:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 14:54:52 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2248 ms
+2025-04-11 14:54:52 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-11 14:54:52 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-11 14:54:52 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-11 14:54:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-11 14:54:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-11 14:54:53 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e090aaa
+2025-04-11 14:54:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-11 14:54:53 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-11 14:54:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-11 14:54:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 14:54:55 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-11 14:54:56 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-11 14:54:56 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-11 14:54:56 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 14:54:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-11 14:54:56 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 7.38 seconds (process running for 8.67)
+2025-04-11 14:55:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 14:55:01 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-11 14:55:01 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-11 14:55:03 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1008 ms
+2025-04-11 14:56:39 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-11 14:56:39 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-11 14:56:39 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-11 14:56:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 14:56:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-11 14:56:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-11 14:57:35 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 15172 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-11 14:57:35 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 14:57:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-11 14:57:36 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2025-04-11 14:57:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-11 14:57:37 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 14:57:37 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 14:57:37 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 14:57:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 14:57:37 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2035 ms
+2025-04-11 14:57:37 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-11 14:57:37 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-11 14:57:38 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-11 14:57:38 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-11 14:57:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-11 14:57:38 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15d79b70
+2025-04-11 14:57:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-11 14:57:38 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-11 14:57:40 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-11 14:57:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 14:57:42 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-11 14:57:44 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-11 14:57:44 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-11 14:57:45 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 14:57:45 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-11 14:57:45 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 10.67 seconds (process running for 11.872)
+2025-04-11 14:57:45 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 14:57:45 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-11 14:57:45 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-11 14:57:47 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1306 ms
+2025-04-11 15:09:55 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m46s471ms413µs600ns).
+2025-04-11 15:10:07 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-11 15:10:07 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-11 15:10:07 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-11 15:10:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 15:10:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-11 15:10:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-11 15:10:12 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 7536 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-11 15:10:12 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-11 15:10:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-11 15:10:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2025-04-11 15:10:14 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-11 15:10:14 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-11 15:10:14 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-11 15:10:14 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-11 15:10:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-11 15:10:14 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2145 ms
+2025-04-11 15:10:14 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-11 15:10:14 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-11 15:10:14 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-11 15:10:15 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-11 15:10:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-11 15:10:15 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ba46845
+2025-04-11 15:10:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-11 15:10:15 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-11 15:10:16 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-11 15:10:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 15:10:17 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-11 15:10:18 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-11 15:10:18 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-11 15:10:19 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-11 15:10:19 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-11 15:10:19 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 7.951 seconds (process running for 9.238)
+2025-04-11 15:10:49 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-11 15:10:49 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-11 15:10:49 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-11 15:10:49 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 1=null (Cache size: 0)
+2025-04-11 15:10:50 ERROR c.e.delivery.aspects.LoggingAspect - !! getFoodById() - exception: Food with id 1 not found
+2025-04-11 15:10:54 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-11 15:17:13 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m57s462ms524µs400ns).
+2025-04-11 15:25:26 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m13s338ms90µs100ns).
+2025-04-11 15:25:31 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-11 15:25:31 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-11 15:25:31 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-11 15:25:31 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-11 15:25:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-11 15:25:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-14 09:07:03 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 6072 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-14 09:07:03 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-14 09:07:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-14 09:07:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2025-04-14 09:07:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-14 09:07:06 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-14 09:07:06 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-14 09:07:06 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 09:07:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-14 09:07:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3070 ms
+2025-04-14 09:07:07 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-14 09:07:07 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-14 09:07:07 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-14 09:07:08 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-14 09:07:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-14 09:07:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b1c501d
+2025-04-14 09:07:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-14 09:07:09 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-14 09:07:11 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-14 09:07:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14 09:07:13 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-14 09:07:15 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-14 09:07:15 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-14 09:07:16 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-14 09:07:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 09:07:16 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 13.352 seconds (process running for 15.323)
+2025-04-14 09:07:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 09:07:25 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-14 09:07:25 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-14 09:07:25 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 09:07:52 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=null (Cache size: 0)
+2025-04-14 09:07:52 INFO  c.example.delivery.utils.CustomCache - Added entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 1)
+2025-04-14 09:07:52 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=8, name=Fish and Chips, price=3.99)
+2025-04-14 09:08:11 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 1)
+2025-04-14 09:08:11 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=8, name=Fish and Chips, price=3.99)
+2025-04-14 09:08:52 INFO  c.example.delivery.utils.CustomCache - Removed entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 0)
+2025-04-14 09:08:52 INFO  c.example.delivery.utils.CustomCache - Automatically removed entry: 8 (Cache size: 0)
+2025-04-14 09:18:21 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 09:18:21 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-14 09:18:22 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-14 09:18:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14 09:18:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-14 09:18:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-14 09:19:10 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 17268 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-14 09:19:10 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-14 09:19:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-14 09:19:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
+2025-04-14 09:19:13 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-14 09:19:13 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-14 09:19:13 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-14 09:19:13 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 09:19:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-14 09:19:13 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2486 ms
+2025-04-14 09:19:13 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-14 09:19:13 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-14 09:19:13 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-14 09:19:14 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-14 09:19:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-14 09:19:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6654ca0d
+2025-04-14 09:19:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-14 09:19:14 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-14 09:19:16 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-14 09:19:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14 09:19:17 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-14 09:19:18 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-14 09:19:19 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-14 09:19:19 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-14 09:19:19 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 09:19:19 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 9.807 seconds (process running for 11.153)
+2025-04-14 09:19:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 09:19:25 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-14 09:19:25 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-14 09:19:25 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=null (Cache size: 0)
+2025-04-14 09:19:25 INFO  c.example.delivery.utils.CustomCache - Added entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 1)
+2025-04-14 09:19:25 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=8, name=Fish and Chips, price=3.99)
+2025-04-14 09:19:27 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 1)
+2025-04-14 09:19:27 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=8, name=Fish and Chips, price=3.99)
+2025-04-14 09:20:25 INFO  c.example.delivery.utils.CustomCache - Removed entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 0)
+2025-04-14 09:20:25 INFO  c.example.delivery.utils.CustomCache - Automatically removed entry: 8 (Cache size: 0)
+2025-04-14 09:38:57 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@3184197b[Not completed]
+2025-04-14 09:39:28 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-14 09:39:51 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@291007f2[Not completed]
+2025-04-14 09:40:10 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-04-14 09:40:51 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: COMPLETED
+2025-04-14 09:40:51 INFO  c.e.delivery.aspects.LoggingAspect - << getLogFilePath() - result: logs\log-9a34f294-0b2e-4f4c-8e91-50258a4b3562.log
+2025-04-14 09:45:55 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@6e0df1f0[Not completed]
+2025-04-14 09:46:04 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@2198e41[Not completed]
+2025-04-14 09:46:08 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@a3607dd[Not completed]
+2025-04-14 09:46:37 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:46:39 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:46:48 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:47:24 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@3d80b6c0[Not completed]
+2025-04-14 09:47:57 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:47:58 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:47:59 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:48:01 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:48:03 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: FAILED: no entries for date
+2025-04-14 09:48:22 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 09:48:23 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 09:48:23 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 09:48:24 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 09:48:25 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=8, name=Fish and Chips, price=3.99), Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 09:48:43 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@6549b33c[Not completed]
+2025-04-14 09:49:01 INFO  c.e.delivery.aspects.LoggingAspect - << getTaskStatus() - result: COMPLETED
+2025-04-14 09:49:01 INFO  c.e.delivery.aspects.LoggingAspect - << getLogFilePath() - result: logs\log-3622aac1-983a-4610-bbe5-2915e0f5228e.log
+2025-04-14 10:14:16 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=null (Cache size: 0)
+2025-04-14 10:14:16 INFO  c.example.delivery.utils.CustomCache - Added entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 1)
+2025-04-14 10:14:16 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=8, name=Fish and Chips, price=3.99)
+2025-04-14 10:14:18 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 1)
+2025-04-14 10:14:18 INFO  c.e.delivery.aspects.LoggingAspect - << getFoodById() - result: Food(id=8, name=Fish and Chips, price=3.99)
+2025-04-14 10:14:58 INFO  c.e.delivery.aspects.LoggingAspect - >> deleteFood() - args: [8]
+2025-04-14 10:14:58 INFO  c.example.delivery.utils.CustomCache - Removed entry: 8=Food(id=8, name=Fish and Chips, price=3.99) (Cache size: 0)
+2025-04-14 10:14:58 INFO  c.e.delivery.aspects.LoggingAspect - << deleteFood() - result: null
+2025-04-14 10:15:02 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 8=null (Cache size: 0)
+2025-04-14 10:15:02 ERROR c.e.delivery.aspects.LoggingAspect - !! getFoodById() - exception: Food with id 8 not found
+2025-04-14 10:15:16 INFO  c.example.delivery.utils.CustomCache - Automatically removed entry: 8 (Cache size: 0)
+2025-04-14 10:19:39 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s186ms168µs900ns).
+2025-04-14 10:19:49 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 10:19:49 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-14 10:19:49 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-14 10:19:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14 10:19:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-14 10:19:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-14 19:52:09 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 14716 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-14 19:52:09 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-14 19:52:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-14 19:52:11 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2025-04-14 19:52:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-14 19:52:12 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-14 19:52:12 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-14 19:52:12 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-14 19:52:12 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-14 19:52:12 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3568 ms
+2025-04-14 19:52:13 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-14 19:52:13 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-14 19:52:13 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-14 19:52:14 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-14 19:52:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-14 19:52:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e6cb932
+2025-04-14 19:52:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-14 19:52:14 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-14 19:52:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-14 19:52:18 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14 19:52:19 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-14 19:52:21 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-14 19:52:21 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-14 19:52:22 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-14 19:52:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-14 19:52:22 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 14.857 seconds (process running for 17.623)
+2025-04-14 19:55:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-14 19:55:05 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-14 19:55:05 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-14 19:55:05 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-14 19:55:19 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-14 19:55:29 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 19:55:30 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 19:55:31 INFO  c.e.delivery.aspects.LoggingAspect - << getAllFood() - result: [Food(id=12, name=Big Tasty, price=4.99), Food(id=13, name=Soup, price=2.99), Food(id=15, name=Fried Fish, price=2.99), Food(id=16, name=Burger, price=4.99), Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-14 19:55:33 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-14 19:55:36 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date' for method parameter type String is not present]
+2025-04-14 19:56:08 INFO  c.e.delivery.aspects.LoggingAspect - << generateAndReturnLogFile() - result: InputStream resource [resource loaded through InputStream]
+2025-04-14 19:56:11 INFO  c.e.delivery.aspects.LoggingAspect - << generateAndReturnLogFile() - result: InputStream resource [resource loaded through InputStream]
+2025-04-14 19:56:27 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-14 19:56:27 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-14 19:56:27 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-14 19:56:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14 19:56:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-14 19:56:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-15 10:56:38 INFO  c.e.delivery.DeliveryApplication - Starting DeliveryApplication using Java 23.0.1 with PID 15280 (D:\Java Projects\Delivery\target\classes started by WwWwWwW in D:\Java Projects\Delivery)
+2025-04-15 10:56:38 INFO  c.e.delivery.DeliveryApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 10:56:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 10:56:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2025-04-15 10:56:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 10:56:40 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 10:56:40 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 10:56:40 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 10:56:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 10:56:41 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2295 ms
+2025-04-15 10:56:41 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 10:56:41 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-15 10:56:41 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 10:56:41 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 10:56:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 10:56:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b444b5
+2025-04-15 10:56:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 10:56:42 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 10:56:43 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 10:56:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 10:56:44 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-15 10:56:45 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 10:56:45 INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-15 10:56:46 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 10:56:46 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-15 10:56:46 INFO  c.e.delivery.DeliveryApplication - Started DeliveryApplication in 8.095 seconds (process running for 11.344)
+2025-04-15 10:56:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-15 10:56:54 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-15 10:56:54 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-04-15 10:56:56 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1176 ms
+2025-04-15 10:59:13 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s387ms550µs900ns).
+2025-04-15 10:59:15 INFO  c.e.delivery.aspects.LoggingAspect - << generateAndReturnLogFile() - result: InputStream resource [resource loaded through InputStream]
+2025-04-15 11:00:35 INFO  c.e.delivery.aspects.LoggingAspect - << searchFoodByName() - result: [Food(id=17, name=Cheese burger, price=2.99)]
+2025-04-15 11:07:57 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m13s535ms840µs400ns).
+2025-04-15 11:12:34 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m37s374ms378µs500ns).
+2025-04-15 12:08:15 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m10s864ms329µs900ns).
+2025-04-15 12:12:16 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m1s452ms72µs100ns).
+2025-04-15 12:12:39 INFO  c.example.delivery.utils.CustomCache - Retrieved entry: 10000=null (Cache size: 0)
+2025-04-15 12:12:39 ERROR c.e.delivery.aspects.LoggingAspect - !! getFoodById() - exception: Food with id 10000 not found
+2025-04-15 12:13:17 INFO  c.e.delivery.aspects.LoggingAspect - >> saveFood() - args: [Food(id=null, name=, price=4.99)]
+2025-04-15 12:13:17 ERROR c.e.delivery.aspects.LoggingAspect - !! saveFood() - exception: Food name must not be empty
+2025-04-15 12:14:28 INFO  c.e.delivery.aspects.LoggingAspect - << generateLogFileForDateAsync() - result: java.util.concurrent.CompletableFuture@5fc34c1b[Not completed]
+2025-04-15 12:14:34 INFO  c.e.delivery.aspects.LoggingAspect - << generateAndReturnLogFile() - result: InputStream resource [resource loaded through InputStream]
+2025-04-15 12:14:46 INFO  c.e.delivery.aspects.LoggingAspect - << generateAndReturnLogFile() - result: InputStream resource [resource loaded through InputStream]
+2025-04-15 12:17:48 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-15 12:17:48 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-15 12:17:48 INFO  c.example.delivery.utils.CustomCache - Shutting down cache executor...
+2025-04-15 12:17:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 12:17:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 12:17:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

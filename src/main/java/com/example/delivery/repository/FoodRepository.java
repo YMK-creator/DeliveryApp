@@ -13,5 +13,13 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
     List<Food> findByNameContainingIgnoreCase(@Param("name") String name);
 
     Optional<Food> findByNameIgnoreCase(String name);
+
+    @Query(value = """
+    SELECT f.*
+    FROM food f
+    JOIN category c ON f.category_id = c.id
+    WHERE LOWER(c.name) LIKE LOWER(CONCAT('%', :categoryName, '%'))
+""", nativeQuery = true)
+    List<Food> findByCategoryNameContainingIgnoreCase(@Param("categoryName") String categoryName);
 }
 
