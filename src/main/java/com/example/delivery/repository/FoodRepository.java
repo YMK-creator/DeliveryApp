@@ -19,7 +19,7 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
     FROM food f
     JOIN category c ON f.category_id = c.id
     WHERE LOWER(c.name) LIKE LOWER(CONCAT('%', :categoryName, '%'))
-""", nativeQuery = true)
+        """, nativeQuery = true)
     List<Food> findByCategoryNameContainingIgnoreCase(@Param("categoryName") String categoryName);
 }
 

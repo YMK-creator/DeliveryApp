@@ -34,8 +34,8 @@ public class CategoryController {
     @Operation(summary = "Получить все категории",
             description = "Возвращает список всех доступных категорий блюд.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Список категорий успешно возвращён"),
-            @ApiResponse(responseCode = "500", description = "Ошибка сервера")
+        @ApiResponse(responseCode = "200", description = "Список категорий успешно возвращён"),
+        @ApiResponse(responseCode = "500", description = "Ошибка сервера")
     })
     @GetMapping
     public List<Category> getAllCategories() {
@@ -45,8 +45,8 @@ public class CategoryController {
     @Operation(summary = "Получить категорию по ID",
             description = "Возвращает информацию о категории по заданному ID.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Категория найдена"),
-            @ApiResponse(responseCode = "404", description = "Категория не найдена")
+        @ApiResponse(responseCode = "200", description = "Категория найдена"),
+        @ApiResponse(responseCode = "404", description = "Категория не найдена")
     })
     @GetMapping("/{id}")
     public ResponseEntity<Category> getCategoryById(
@@ -58,8 +58,8 @@ public class CategoryController {
     @Operation(summary = "Создать новую категорию",
             description = "Создаёт новую категорию с переданными данными.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "Категория успешно создана"),
-            @ApiResponse(responseCode = "400", description = "Неверные данные для создания категории")
+        @ApiResponse(responseCode = "201", description = "Категория успешно создана"),
+        @ApiResponse(responseCode = "400", description = "Неверные данные для создания категории")
     })
     @PostMapping
     public Category createCategory(@RequestBody Category category) {
@@ -69,8 +69,8 @@ public class CategoryController {
     @Operation(summary = "Обновить категорию",
             description = "Обновляет информацию о категории по заданному ID.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Категория успешно обновлена"),
-            @ApiResponse(responseCode = "404", description = "Категория не найдена")
+        @ApiResponse(responseCode = "200", description = "Категория успешно обновлена"),
+        @ApiResponse(responseCode = "404", description = "Категория не найдена")
     })
     @PutMapping("/{id}")
     public ResponseEntity<Category> updateCategory(
@@ -83,8 +83,8 @@ public class CategoryController {
     @Operation(summary = "Удалить категорию",
             description = "Удаляет категорию по заданному ID.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Категория успешно удалена"),
-            @ApiResponse(responseCode = "404", description = "Категория не найдена")
+        @ApiResponse(responseCode = "200", description = "Категория успешно удалена"),
+        @ApiResponse(responseCode = "404", description = "Категория не найдена")
     })
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCategory(

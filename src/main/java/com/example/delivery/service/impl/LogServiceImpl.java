@@ -16,16 +16,26 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.stereotype.Service;
 import com.example.delivery.service.LogService;
 
-
 @Slf4j
 @Service
 public class LogServiceImpl implements LogService {
 
+    private final String logFilePath;
+    private final String logsDir;
+
+    // Основной конструктор (используется приложением)
+    public LogServiceImpl() {
+        this("app.log", "logs/");
+    }
+
+    // Для тестов или переопределения
+    public LogServiceImpl(String logFilePath, String logsDir) {
+        this.logFilePath = logFilePath;
+        this.logsDir = logsDir;
+    }
+
     private final Map<String, String> taskStatusMap = new ConcurrentHashMap<>();
     private final Map<String, String> taskFilePathMap = new ConcurrentHashMap<>();
-
-    private static final String LOGS_DIR = "logs/"; // лог-файлы сюда
-    private static final String SOURCE_LOG_FILE = "app.log"; // исходный лог-файл
 
     @Override
     public CompletableFuture<String> generateLogFileForDateAsync(String date) {
@@ -34,22 +44,25 @@ public class LogServiceImpl implements LogService {
 
         return CompletableFuture.supplyAsync(() -> {
             try {
-                Path sourcePath = Paths.get(SOURCE_LOG_FILE);
+                Path sourcePath = Paths.get(logFilePath);
                 if (!Files.exists(sourcePath)) {
                     taskStatusMap.put(taskId, "FAILED: no source log file");
                     return taskId;
                 }
 
-                String filteredLogs = Files.lines(sourcePath)
-                        .filter(line -> line.contains(date))
-                        .collect(Collectors.joining(System.lineSeparator()));
+                String filteredLogs;
+                try (var stream = Files.lines(sourcePath)) {
+                    filteredLogs = stream
+                            .filter(line -> line.contains(date))
+                            .collect(Collectors.joining(System.lineSeparator()));
+                }
 
                 if (filteredLogs.isEmpty()) {
                     taskStatusMap.put(taskId, "FAILED: no entries for date");
                     return taskId;
                 }
 
-                Path outputDir = Paths.get(LOGS_DIR);
+                Path outputDir = Paths.get(logsDir);
                 if (!Files.exists(outputDir)) {
                     Files.createDirectories(outputDir);
                 }
@@ -80,14 +93,17 @@ public class LogServiceImpl implements LogService {
     @Override
     public InputStreamResource generateAndReturnLogFile(String date) {
         try {
-            Path sourcePath = Paths.get(SOURCE_LOG_FILE);
+            Path sourcePath = Paths.get(logFilePath);
             if (!Files.exists(sourcePath)) {
                 throw new FileNotFoundException("Исходный лог-файл не найден");
             }
 
-            String filteredLogs = Files.lines(sourcePath)
-                    .filter(line -> line.contains(date))
-                    .collect(Collectors.joining(System.lineSeparator()));
+            String filteredLogs;
+            try (var stream = Files.lines(sourcePath)) {
+                filteredLogs = stream
+                        .filter(line -> line.contains(date))
+                        .collect(Collectors.joining(System.lineSeparator()));
+            }
 
             if (filteredLogs.isEmpty()) {
                 throw new RuntimeException("Нет записей в логах на указанную дату");
@@ -102,5 +118,4 @@ public class LogServiceImpl implements LogService {
             throw new RuntimeException("Ошибка при формировании лог-файла: " + e.getMessage());
         }
     }
-
 }

@@ -130,8 +130,8 @@ public class FoodController {
     @Operation(summary = "Поиск блюда по категории",
             description = "Ищет блюда по названию категории.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Результаты поиска найдены"),
-            @ApiResponse(responseCode = "400", description = "Неверный запрос")
+        @ApiResponse(responseCode = "200", description = "Результаты поиска найдены"),
+        @ApiResponse(responseCode = "400", description = "Неверный запрос")
     })
 
     @GetMapping("/search-by-category")
