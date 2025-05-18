@@ -7,8 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +35,8 @@ public class LogServiceImpl implements LogService {
 
     private final Map<String, String> taskStatusMap = new ConcurrentHashMap<>();
     private final Map<String, String> taskFilePathMap = new ConcurrentHashMap<>();
+    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
 
     @Override
     public CompletableFuture<String> generateLogFileForDateAsync(String date) {
@@ -70,8 +71,13 @@ public class LogServiceImpl implements LogService {
                 Path outputPath = outputDir.resolve("log-" + taskId + ".log");
                 Files.write(outputPath, filteredLogs.getBytes());
 
-                taskStatusMap.put(taskId, "COMPLETED");
                 taskFilePathMap.put(taskId, outputPath.toString());
+
+                // Планируем смену статуса через 5 секунд
+                scheduler.schedule(() -> {
+                    taskStatusMap.put(taskId, "COMPLETED");
+                }, 20, TimeUnit.SECONDS);
+
             } catch (IOException e) {
                 log.error("Error generating log file", e);
                 taskStatusMap.put(taskId, "FAILED: " + e.getMessage());
@@ -79,6 +85,8 @@ public class LogServiceImpl implements LogService {
             return taskId;
         });
     }
+
+
 
     @Override
     public String getTaskStatus(String taskId) {
@@ -111,7 +119,6 @@ public class LogServiceImpl implements LogService {
 
             Path tempFile = Files.createTempFile("log-" + date, ".log");
             Files.write(tempFile, filteredLogs.getBytes());
-
             return new InputStreamResource(Files.newInputStream(tempFile));
         } catch (IOException e) {
             log.error("Ошибка при создании лог-файла", e);
@@ -119,3 +126,4 @@ public class LogServiceImpl implements LogService {
         }
     }
 }
+
