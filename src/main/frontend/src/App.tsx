@@ -1,27 +1,38 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {
-    AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, Button,
-    Box, Paper, Badge
+    Box,
+    Drawer,
+    List,
+    ListItem,
+    Button,
+    AppBar,
+    Toolbar,
+    IconButton,
+    Paper,
+    Typography,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import HomePage from './pages/HomePage';
+import FoodPage from './pages/FoodPage';
+import CategoryPage from './pages/CategoryPage';
+import IngredientPage from './pages/IngredientPage';
 
 const drawerWidth = 240;
 
-function App() {
-    const [open, setOpen] = useState(false);
+const App: React.FC = () => {
+    const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const toggleDrawer = () => setOpen(prev => !prev);
+    const toggleDrawer = () => {
+        setDrawerOpen(prev => !prev);
+    };
 
     return (
         <Router>
-            <Box sx={{ display: 'flex', fontFamily: 'Roboto, sans-serif' }}>
-                {/* Верхняя панель */}
-                <AppBar
-                    position="fixed"
-                    sx={{ backgroundColor: '#FFD100', color: '#000', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-                >
+            <Box sx={{ display: 'flex' }}>
+                {/* Top App Bar */}
+                <AppBar position="fixed" sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
                     <Toolbar>
                         <IconButton
                             color="inherit"
@@ -31,55 +42,59 @@ function App() {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                            🍽️ Доставка еды
-                        </Typography>
-                        <IconButton color="inherit">
-                            <Badge badgeContent={2} color="error">
-                                <ShoppingCartIcon />
-                            </Badge>
-                        </IconButton>
+                        <Paper elevation={3} sx={{ padding: '0.3rem 1rem', borderRadius: '8px' }}>
+                            <Typography variant="h6" component="div">
+                                🍔 FOOD SERVICE
+                            </Typography>
+                        </Paper>
                     </Toolbar>
                 </AppBar>
 
-                {/* Боковое меню */}
+                {/* Side Drawer */}
                 <Drawer
-                    variant="temporary"
-                    open={open}
-                    onClose={toggleDrawer}
+                    variant="persistent"
+                    open={drawerOpen}
                     sx={{
+                        width: drawerWidth,
+                        flexShrink: 0,
                         '& .MuiDrawer-paper': {
                             width: drawerWidth,
                             boxSizing: 'border-box',
+                            transition: 'width 0.3s',
                         },
                     }}
                 >
                     <Toolbar />
                     <List>
                         <ListItem>
-                            <Button component={Link} to="/" fullWidth>🏠 Главная</Button>
+                            <Button component={Link} to="/">🏠 Home</Button>
                         </ListItem>
                         <ListItem>
-                            <Button component={Link} to="/food" fullWidth>🍔 Блюда</Button>
+                            <Button component={Link} to="/food">🍔 Food</Button>
                         </ListItem>
                         <ListItem>
-                            <Button component={Link} to="/categories" fullWidth>📂 Категории</Button>
+                            <Button component={Link} to="/categories">📁 Categories</Button>
                         </ListItem>
                         <ListItem>
-                            <Button component={Link} to="/ingredients" fullWidth>🥦 Ингредиенты</Button>
+                            <Button component={Link} to="/ingredients">🧂 Ingredients</Button>
                         </ListItem>
                     </List>
                 </Drawer>
 
-                {/* Контент */}
+                {/* Main Content */}
                 <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                     <Toolbar />
                     <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/food" element={<FoodPage />} />
+                        <Route path="/categories" element={<CategoryPage />} />
+                        <Route path="/ingredients" element={<IngredientPage />} />
+                        <Route path="*" element={<HomePage />} />
                     </Routes>
                 </Box>
             </Box>
         </Router>
     );
-}
+};
 
 export default App;
