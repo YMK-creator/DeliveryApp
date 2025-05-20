@@ -3,119 +3,104 @@ import axios from 'axios';
 import {
     Box,
     Typography,
-    Card,
-    CardContent,
-    TextField,
     Button,
-    List,
-    ListItem,
-    ListItemText,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Paper,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+    TextField,
     IconButton,
-    Divider,
     Alert,
     CircularProgress,
 } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import SaveIcon from '@mui/icons-material/Save';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
-import CategoryIcon from '@mui/icons-material/Category';
+import { Delete, Edit, Add } from '@mui/icons-material';
 
 interface Category {
     id: number;
     name: string;
 }
 
+const API_URL = 'http://localhost:8080';
+
 const CategoryPage: React.FC = () => {
     const [categories, setCategories] = useState<Category[]>([]);
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [newCategoryName, setNewCategoryName] = useState<string>('');
-    const [editingId, setEditingId] = useState<number | null>(null);
-    const [editedName, setEditedName] = useState<string>('');
-
-    const fetchCategories = () => {
-        setLoading(true);
-        axios
-            .get<Category[]>('http://localhost:8080/category')
-            .then((res) => {
-                setCategories(res.data);
-                setError(null);
-                setLoading(false);
-            })
-            .catch((err) => {
-                console.error(err);
-                setError('Не удалось загрузить категории');
-                setLoading(false);
-            });
-    };
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [currentCategory, setCurrentCategory] = useState<Partial<Category>>({});
 
     useEffect(() => {
         fetchCategories();
     }, []);
 
-    const handleDelete = (id: number) => {
-        axios
-            .delete(`http://localhost:8080/category/${id}`)
-            .then(() => {
-                setCategories((prev) => prev.filter((cat) => cat.id !== id));
-            })
-            .catch((err) => {
-                console.error(err);
-                setError('Ошибка при удалении категории');
-            });
+    const fetchCategories = async () => {
+        setLoading(true);
+        try {
+            const response = await axios.get<Category[]>(`${API_URL}/category`);
+            setCategories(response.data);
+            setError(null);
+        } catch (err) {
+            console.error(err);
+            setError('Не удалось загрузить категории');
+        } finally {
+            setLoading(false);
+        }
     };
 
-    const handleEdit = (category: Category) => {
-        setEditingId(category.id);
-        setEditedName(category.name);
+    const handleOpenDialog = (category?: Category) => {
+        setCurrentCategory(category ? { ...category } : {});
+        setDialogOpen(true);
     };
 
-    const handleSave = (id: number) => {
-        axios
-            .put(`http://localhost:8080/category/${id}`, { id, name: editedName })
-            .then(() => {
-                setCategories((prev) =>
-                    prev.map((cat) =>
-                        cat.id === id ? { ...cat, name: editedName } : cat
-                    )
-                );
-                setEditingId(null);
-                setEditedName('');
-            })
-            .catch((err) => {
-                console.error(err);
-                setError('Ошибка при обновлении категории');
-            });
+    const handleCloseDialog = () => {
+        setDialogOpen(false);
+        setCurrentCategory({});
+        setError(null);
     };
 
-    const handleAddCategory = () => {
-        if (!newCategoryName.trim()) return;
+    const handleSave = async () => {
+        if (!currentCategory.name || !currentCategory.name.trim()) {
+            setError('Название категории не может быть пустым');
+            return;
+        }
 
-        axios
-            .post('http://localhost:8080/category', { name: newCategoryName })
-            .then((res) => {
-                setCategories((prev) => [...prev, res.data]);
-                setNewCategoryName('');
-            })
-            .catch((err) => {
-                console.error(err);
-                setError('Ошибка при добавлении категории');
-            });
+        try {
+            if (currentCategory.id) {
+                await axios.put(`${API_URL}/category/${currentCategory.id}`, currentCategory);
+            } else {
+                const response = await axios.post(`${API_URL}/category`, currentCategory);
+                setCategories((prev) => [...prev, response.data]);
+            }
+            fetchCategories();
+            handleCloseDialog();
+        } catch (err) {
+            console.error(err);
+            setError('Ошибка при сохранении категории');
+        }
+    };
+
+    const handleDelete = async (id: number) => {
+        try {
+            await axios.delete(`${API_URL}/category/${id}`);
+            fetchCategories();
+        } catch (err) {
+            console.error(err);
+            setError('Ошибка при удалении категории');
+        }
     };
 
     return (
-        <Box sx={{ padding: '2rem', maxWidth: '800px' }}>
-            <Card sx={{ mb: 4 }}>
-                <CardContent>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                        <CategoryIcon color="primary" sx={{ fontSize: 40 }} />
-                        <Typography variant="h4" component="h1" gutterBottom>
-                            Категории блюд
-                        </Typography>
-                    </Box>
-                </CardContent>
-            </Card>
+        <Box sx={{ p: 3 }}>
+            <Typography variant="h4" gutterBottom>
+                🍽 Категории
+            </Typography>
 
             {error && (
                 <Alert severity="error" sx={{ mb: 2 }}>
@@ -123,72 +108,77 @@ const CategoryPage: React.FC = () => {
                 </Alert>
             )}
 
-            <Box sx={{ mb: 3, display: 'flex', gap: 2 }}>
-                <TextField
-                    label="Новая категория"
-                    value={newCategoryName}
-                    onChange={(e) => setNewCategoryName(e.target.value)}
-                    fullWidth
-                />
-                <Button
-                    variant="contained"
-                    startIcon={<AddCircleIcon />}
-                    onClick={handleAddCategory}
-                >
-                    Добавить
-                </Button>
-            </Box>
+            <Button
+                variant="contained"
+                startIcon={<Add />}
+                onClick={() => handleOpenDialog()}
+                sx={{ mb: 2 }}
+            >
+                Добавить категорию
+            </Button>
 
             {loading ? (
                 <Box sx={{ display: 'flex', justifyContent: 'center', py: 4 }}>
                     <CircularProgress />
                 </Box>
             ) : (
-                <List>
-                    {categories.map((category) => (
-                        <React.Fragment key={category.id}>
-                            <ListItem
-                                secondaryAction={
-                                    <>
-                                        {editingId === category.id ? (
-                                            <IconButton
-                                                edge="end"
-                                                onClick={() => handleSave(category.id)}
-                                            >
-                                                <SaveIcon />
-                                            </IconButton>
-                                        ) : (
-                                            <IconButton
-                                                edge="end"
-                                                onClick={() => handleEdit(category)}
-                                            >
-                                                <EditIcon />
-                                            </IconButton>
-                                        )}
-                                        <IconButton
-                                            edge="end"
-                                            onClick={() => handleDelete(category.id)}
-                                        >
-                                            <DeleteIcon />
+                <TableContainer component={Paper}>
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Название</TableCell>
+                                <TableCell align="right">Действия</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {categories.map((category) => (
+                                <TableRow key={category.id}>
+                                    <TableCell>{category.name}</TableCell>
+                                    <TableCell align="right">
+                                        <IconButton onClick={() => handleOpenDialog(category)}>
+                                            <Edit />
                                         </IconButton>
-                                    </>
-                                }
-                            >
-                                {editingId === category.id ? (
-                                    <TextField
-                                        value={editedName}
-                                        onChange={(e) => setEditedName(e.target.value)}
-                                        fullWidth
-                                    />
-                                ) : (
-                                    <ListItemText primary={category.name} />
-                                )}
-                            </ListItem>
-                            <Divider />
-                        </React.Fragment>
-                    ))}
-                </List>
+                                        <IconButton onClick={() => handleDelete(category.id)}>
+                                            <Delete />
+                                        </IconButton>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
             )}
+
+            <Dialog open={dialogOpen} onClose={handleCloseDialog} fullWidth maxWidth="sm">
+                <DialogTitle>
+                    {currentCategory.id ? 'Редактировать категорию' : 'Добавить категорию'}
+                </DialogTitle>
+                <DialogContent sx={{ px: 3, pt: 2 }}>
+                    <TextField
+                        autoFocus
+                        margin="dense"
+                        label="Название"
+                        fullWidth
+                        value={currentCategory.name || ''}
+                        onChange={(e) =>
+                            setCurrentCategory({ ...currentCategory, name: e.target.value })
+                        }
+                        disabled={loading}
+                    />
+                </DialogContent>
+                <DialogActions sx={{ px: 3, pb: 2 }}>
+                    <Button onClick={handleCloseDialog} disabled={loading}>
+                        Отмена
+                    </Button>
+                    <Button
+                        onClick={handleSave}
+                        variant="contained"
+                        disabled={loading}
+                    >
+                        Сохранить
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Box>
     );
 };

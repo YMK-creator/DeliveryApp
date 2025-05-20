@@ -140,4 +140,11 @@ public class FoodController {
         return foodService.searchFoodByCategoryName(category);
     }
 
+    @DeleteMapping("/{foodId}/ingredients")
+    public ResponseEntity<Void> deleteAllIngredientsFromFood(@PathVariable Long foodId) {
+        foodService.clearIngredientsFromFood(foodId);
+        return ResponseEntity.noContent().build();
+    }
+
+
 }

@@ -101,7 +101,7 @@ const IngredientPage: React.FC = () => {
     };
 
     return (
-        <Box>
+        <Box sx={{ p: 3 }}>
             <Typography variant="h4" gutterBottom>
                 🧂 Ингредиенты
             </Typography>
@@ -112,7 +112,12 @@ const IngredientPage: React.FC = () => {
                 </Alert>
             )}
 
-            <Button variant="contained" startIcon={<Add />} onClick={() => handleOpenDialog()}>
+            <Button
+                variant="contained"
+                startIcon={<Add />}
+                onClick={() => handleOpenDialog()}
+                sx={{ mb: 2 }}
+            >
                 Добавить ингредиент
             </Button>
 
@@ -123,7 +128,7 @@ const IngredientPage: React.FC = () => {
             )}
 
             {!loading && (
-                <TableContainer component={Paper} sx={{ marginTop: 2 }}>
+                <TableContainer component={Paper}>
                     <Table>
                         <TableHead>
                             <TableRow>
@@ -150,9 +155,11 @@ const IngredientPage: React.FC = () => {
                 </TableContainer>
             )}
 
-            <Dialog open={openDialog} onClose={handleCloseDialog}>
-                <DialogTitle>{currentIngredient.id ? 'Редактировать ингредиент' : 'Добавить ингредиент'}</DialogTitle>
-                <DialogContent>
+            <Dialog open={openDialog} onClose={handleCloseDialog} fullWidth maxWidth="sm">
+                <DialogTitle>
+                    {currentIngredient.id ? 'Редактировать ингредиент' : 'Добавить ингредиент'}
+                </DialogTitle>
+                <DialogContent sx={{ px: 3, pt: 2 }}>
                     <TextField
                         autoFocus
                         margin="dense"
@@ -163,11 +170,15 @@ const IngredientPage: React.FC = () => {
                         disabled={loading}
                     />
                 </DialogContent>
-                <DialogActions>
+                <DialogActions sx={{ px: 3, pb: 2 }}>
                     <Button onClick={handleCloseDialog} disabled={loading}>
                         Отмена
                     </Button>
-                    <Button onClick={handleSave} variant="contained" disabled={loading}>
+                    <Button
+                        onClick={handleSave}
+                        variant="contained"
+                        disabled={loading}
+                    >
                         Сохранить
                     </Button>
                 </DialogActions>

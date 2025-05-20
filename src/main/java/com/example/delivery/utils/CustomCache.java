@@ -15,6 +15,7 @@ public class CustomCache<K, V> {
     private final long maxAgeInMillis;
     private final int maxSize;
 
+
     public CustomCache() {
         this.maxAgeInMillis = 60000; // 60 секунд
         this.maxSize = 1000;
@@ -22,10 +23,6 @@ public class CustomCache<K, V> {
             @Override
             protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
                 boolean shouldRemove = size() > maxSize;
-                if (shouldRemove) {
-                    log.info("Removing eldest entry: {}={} (Cache size: {})",
-                            eldest.getKey(), eldest.getValue(), size());
-                }
                 return shouldRemove;
             }
         };
@@ -34,30 +31,24 @@ public class CustomCache<K, V> {
 
     public synchronized void put(K key, V value) {
         cache.put(key, value);
-        log.info("Added entry: {}={} (Cache size: {})", key, value, cache.size());
 
         executor.schedule(() -> {
             remove(key);
-            log.info("Automatically removed entry: {} (Cache size: {})", key, cache.size());
         }, maxAgeInMillis, TimeUnit.MILLISECONDS);
     }
 
     public synchronized V get(K key) {
         V value = cache.get(key);
-        log.info("Retrieved entry: {}={} (Cache size: {})", key, value, cache.size());
         return value;
     }
 
     public synchronized void remove(K key) {
         V value = cache.remove(key);
-        if (value != null) {
-            log.info("Removed entry: {}={} (Cache size: {})", key, value, cache.size());
-        }
+        if (value != null) {}
     }
 
     public synchronized void clear() {
         cache.clear();
-        log.info("Cache cleared.");
     }
 
     public synchronized int size() {
@@ -65,7 +56,6 @@ public class CustomCache<K, V> {
     }
 
     public void shutdown() {
-        log.info("Shutting down cache executor...");
         executor.shutdown();
     }
 }

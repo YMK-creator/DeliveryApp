@@ -189,4 +189,15 @@ public class FoodServiceImpl implements FoodService {
     public List<Food> searchFoodByCategoryName(String categoryName) {
         return foodRepository.findByCategoryNameContainingIgnoreCase(categoryName);
     }
+
+    public void clearIngredientsFromFood(Long foodId) {
+        Food food = foodRepository.findById(foodId)
+                .orElseThrow(() -> new EntityNotFoundException("Food", foodId));
+
+        food.getIngredients().clear();
+
+        foodRepository.save(food);
+        foodCache.put(foodId, food); // если используешь кэш
+    }
+
 }

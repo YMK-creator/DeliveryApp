@@ -44,7 +44,7 @@ const App: React.FC = () => {
                         </IconButton>
                         <Paper elevation={3} sx={{ padding: '0.3rem 1rem', borderRadius: '8px' }}>
                             <Typography variant="h6" component="div">
-                                🍔 FOOD SERVICE
+                                🍔 Доставка еды
                             </Typography>
                         </Paper>
                     </Toolbar>
@@ -67,16 +67,16 @@ const App: React.FC = () => {
                     <Toolbar />
                     <List>
                         <ListItem>
-                            <Button component={Link} to="/">🏠 Home</Button>
+                            <Button component={Link} to="/">🏠 Домашняя</Button>
                         </ListItem>
                         <ListItem>
-                            <Button component={Link} to="/food">🍔 Food</Button>
+                            <Button component={Link} to="/food">🍔 Блюда</Button>
                         </ListItem>
                         <ListItem>
-                            <Button component={Link} to="/categories">📁 Categories</Button>
+                            <Button component={Link} to="/categories">📁 Категории</Button>
                         </ListItem>
                         <ListItem>
-                            <Button component={Link} to="/ingredients">🧂 Ingredients</Button>
+                            <Button component={Link} to="/ingredients">🧂 Ингредиенты</Button>
                         </ListItem>
                     </List>
                 </Drawer>

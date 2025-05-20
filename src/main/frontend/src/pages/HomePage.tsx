@@ -74,8 +74,8 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <Box sx={{ padding: '2rem', maxWidth: '1200px', marginLeft: '-1rem' }}>
-            <Card sx={{ mb: 4 }}>
+        <Box sx={{ padding: '2rem', maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <Card sx={{ mb: 4, width: '100%' }}>
                 <CardContent>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                         <HomeIcon color="primary" sx={{ fontSize: 40 }} />
@@ -86,7 +86,7 @@ const HomePage: React.FC = () => {
                 </CardContent>
             </Card>
 
-            <Card sx={{ width: '1200px' }}>
+            <Card sx={{ width: '100%' }}>
                 <CardContent sx={{ px: 3 }}>
                     <Box sx={{ display: 'flex', alignItems: 'stretch', gap: 2, mb: 2 }}>
                         <RestaurantMenuIcon color="primary" sx={{ fontSize: 40 }} />
@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
                                         boxShadow: 2,
                                         transition: 'box-shadow 0.3s',
                                         '&:hover': { boxShadow: 4 },
-                                        width: '1155px',
+                                        width: '100%',
                                     }}
                                 >
                                     <Button

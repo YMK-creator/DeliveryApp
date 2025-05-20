@@ -23,4 +23,6 @@ public interface FoodService {
     List<Food> searchFoodByName(String name);
 
     List<Food> searchFoodByCategoryName(String categoryName);
+
+    void clearIngredientsFromFood(Long foodId);
 }

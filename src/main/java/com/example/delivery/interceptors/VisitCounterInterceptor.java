@@ -10,9 +10,12 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 @Component
-@RequiredArgsConstructor
 public class VisitCounterInterceptor implements HandlerInterceptor {
     private final VisitCounterService visitCounterService;
+
+    public VisitCounterInterceptor(VisitCounterService visitCounterService) {
+        this.visitCounterService = visitCounterService;
+    }
 
     @Override
     public boolean preHandle(@NonNull HttpServletRequest request,

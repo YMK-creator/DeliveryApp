@@ -1,0 +1,42 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/DeliveryAppDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 14789632
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+    depends_on:
+      - db
+    networks:
+      - app-network
+  frontend:
+    build: ./src/main/frontend
+    ports:
+      - '3000:3000'
+    networks:
+      - app-network
+  db:
+    image: postgres:13
+    ports:
+      - "5433:5432"
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL-AUTO: ${SPRING_JPA_HIBERNATE_DDL-AUTO} 
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:

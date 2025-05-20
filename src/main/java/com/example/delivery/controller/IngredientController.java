@@ -21,10 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/ingredient")
-@RequiredArgsConstructor
 @Tag(name = "Ingredient Controller", description = "API для управления ингредиентами блюд")
 public class IngredientController {
     private final IngredientService ingredientService;
+
+    public IngredientController(IngredientService ingredientService) {
+        this.ingredientService = ingredientService;
+    }
 
     @Operation(summary = "Получить все ингредиенты",
             description = "Возвращает список всех доступных ингредиентов.")

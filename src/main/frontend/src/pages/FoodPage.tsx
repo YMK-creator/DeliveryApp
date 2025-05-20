@@ -208,8 +208,7 @@ const FoodPage: React.FC = () => {
         if (!selectedFoodForIngredients) return;
 
         try {
-            // Можно добавить очистку текущих ингредиентов если нужно
-            // await axios.delete(`http://localhost:8080/food/${selectedFoodForIngredients.id}/ingredients`);
+            await axios.delete(`http://localhost:8080/food/${selectedFoodForIngredients.id}/ingredients`);
 
             // Добавляем ингредиенты по одному POST запросу
             for (const ingredientId of selectedIngredientIds) {
@@ -303,6 +302,8 @@ const FoodPage: React.FC = () => {
                             value={currentFood.name}
                             onChange={handleInputChange}
                             fullWidth
+                            variant="outlined"
+                            margin="dense"
                         />
                         <TextField
                             label="Цена"
@@ -311,12 +312,33 @@ const FoodPage: React.FC = () => {
                             value={currentFood.price}
                             onChange={handleInputChange}
                             fullWidth
+                            variant="outlined"
+                            margin="dense"
                         />
-                        <FormControl fullWidth>
-                            <InputLabel>Категория</InputLabel>
-                            <Select value={currentFood.categoryId?.toString() || ''} onChange={handleCategoryChange} fullWidth>
+                        <FormControl fullWidth margin="dense">
+                            <InputLabel id="category-label">Категория</InputLabel>
+                            <Select
+                                labelId="category-label"
+                                value={currentFood.categoryId?.toString() || ''}
+                                onChange={handleCategoryChange}
+                                label="Категория"
+                                MenuProps={{
+                                    PaperProps: {
+                                        style: {
+                                            width: 'auto', // делаем auto
+                                        },
+                                        sx: {
+                                            minWidth: '100%', // равен ширине select
+                                        },
+                                    },
+                                }}
+                            >
                                 {categories.map((cat) => (
-                                    <MenuItem key={cat.id} value={cat.id}>
+                                    <MenuItem
+                                        key={cat.id}
+                                        value={cat.id}
+                                        sx={{ width: '100%' }} // каждый пункт тянется на 100% от выпадающего списка
+                                    >
                                         {cat.name}
                                     </MenuItem>
                                 ))}
@@ -361,7 +383,11 @@ const FoodPage: React.FC = () => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseIngredientDialog}>Отмена</Button>
-                    <Button variant="contained" onClick={handleSaveIngredients} disabled={selectedIngredientIds.length === 0}>
+                    <Button
+                        variant="contained"
+                        onClick={handleSaveIngredients}
+                        disabled={selectedIngredientIds.length === 0}
+                    >
                         Сохранить
                     </Button>
                 </DialogActions>
@@ -376,6 +402,7 @@ const FoodPage: React.FC = () => {
             />
         </Box>
     );
+
 };
 
 export default FoodPage;

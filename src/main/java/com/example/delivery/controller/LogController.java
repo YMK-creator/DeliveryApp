@@ -28,10 +28,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/logs")
 @Tag(name = "Log Controller", description = "API для работы с логами системы")
-@RequiredArgsConstructor
 public class LogController {
 
     private final LogService logService;
+
+    public LogController(LogService logService) {
+        this.logService = logService;
+    }
 
     @Operation(summary = "Сгенерировать файл логов",
             description = "Запускает асинхронную генерацию файла логов для указанной даты")
